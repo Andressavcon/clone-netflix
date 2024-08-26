@@ -1,6 +1,7 @@
 # Projeto: Clone Netflix 🎬
 
 **Atividade 06, Módulo 04 +praTi**
+[Link aplicação - Clone Netflix](https://clonenetlix.netlify.app/)
 
 ### Objetivo 🎯
 
@@ -18,16 +19,16 @@ Nesta atividade, o desafio foi criar um clone do front-end da Netflix. Replicand
 
 ### Instruções para Executar o Projeto 🚀
 
-1. **Clone o repositório:**
+1. **Clone o repositório SSH:**
 
    ```bash
-   git clone <URL-do-repositório>
+   git clone git@github.com:Andressavcon/clone-netflix.git
    ```
 
 2. **Navegue até o diretório do projeto:**
 
    ```bash
-   cd <nome-do-diretório>
+   cd clone-netflix
    ```
 
 3. **Instale as dependências:**

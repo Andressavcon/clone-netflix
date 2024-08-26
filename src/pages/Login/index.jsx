@@ -4,23 +4,32 @@ import styled from "styled-components";
 
 import IconNetflix from "../../components/IconNetflix";
 import IconErrors from "../../components/IconError";
+import bkgImage from "../../img/bkg.jpg";
 
 const Main = styled.main`
 	height: 100vh;
 	max-width: 100%;
 	position: relative;
-	background: url("./src/img/bkg.jpg") no-repeat center/cover;
+`;
 
-	&::after {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(0, 0, 0, 0.5);
-		z-index: 1;
-	}
+const BackgroundImage = styled.img`
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 0;
+`;
+
+const Overlay = styled.div`
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 1;
 `;
 
 const Container = styled.div`
@@ -175,6 +184,8 @@ export const Login = () => {
 	return (
 		<>
 			<Main>
+				<BackgroundImage src={bkgImage} alt="Background" />
+				<Overlay />
 				<Container>
 					<Header>
 						<IconNetflix fill="var(--bkg-red)" width="148" height="40" />
@@ -241,7 +252,6 @@ export const Login = () => {
 			<Footer>
 				<Container>
 					<p>Dúvidas? Ligue 0800 591 2876</p>
-
 					<GridLinks>
 						<a href="#">Perguntas frequentes</a>
 						<a href="#">Central de Ajuda</a>
